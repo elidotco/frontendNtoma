@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -24,10 +25,19 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  font-family: "Montserrat", system-ui;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+.list > .line {
+  display: none;
+  transition: all 1s ease-in-out;
+}
+.list:hover > .line {
+  display: flex;
+  transition: all 1s ease-in-out;
 }
