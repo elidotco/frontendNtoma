@@ -1,12 +1,22 @@
-import Image from "next/image";
+"use client";
+
 import Nav from "./components/Nav";
-import ProductCard from "./components/ProductCard";
+
+import {
+  AboutSection,
+  Footer,
+  HeroSection,
+  ProductSection,
+} from "./components/sections";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center p-24 pt-0">
+    <main className="flex min-h-screen overflow-hidden w-full  flex-col items-center bg-white  pt-0 px-0">
       <Nav />
-      <ProductCard />
+      <HeroSection />
+      <ProductSection />
+      <AboutSection />
+      <Footer />
     </main>
   );
 }
