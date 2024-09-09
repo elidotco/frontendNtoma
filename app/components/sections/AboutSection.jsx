@@ -5,8 +5,8 @@ const AboutSection = () => {
   return (
     <section className="w-full">
       {/* Section One */}
-      <section className="w-full h-screen bg-black px-[10vw] flex justify-start items-center">
-        <div className="bg-white w-[40%] h-4/5 relative  px-[3vw] py-[2vw]">
+      <section className="w-full   lg:h-[110vh] min-h-fit bg-black px-[20vw] flex justify-start items-center about-section-one">
+        <div className="bg-white  h-[70vh] relative lg:w-[40%] md:w-[65%] w-full   px-[3vw] py-[2vw]">
           <h2 className="text-5xl font-bold pb-10">Shop Now and Enjoy</h2>
           <p className="text-light text-lg text-gray-900">
             Elevate your style with Ntomawura&apos;s hottest sale of the season!
@@ -26,10 +26,19 @@ const AboutSection = () => {
       {/* Section One */}
 
       {/* Checks Section */}
-      <div className="flex items-center justify-between gap-16 py-20 px-[10vw]">
-        <div className="flex flex-col items-center">
-          {/* Icon */}
-          {/* Icon */}
+      <div className="flex items-center flex-col md:flex-row justify-between gap-16 py-20 px-[10vw]">
+        <div className="flex flex-col items-center checks">
+          <div className="h-[100px] w-[150px] flex items-center flex-col justify-center  checksday">
+            {/* Icon */}
+            <img
+              width="50"
+              height="50"
+              src="https://img.icons8.com/ios/50/truck--v1.png"
+              alt="truck--v1"
+            />
+            {/* Icon */}
+            <div className="line"></div>
+          </div>
           <h3 className="font-bold text-xl py-5">7 days free return</h3>
           <p className="text-center">
             At Ntomawura, your satisfaction is our top priority, and we want you
@@ -38,8 +47,18 @@ const AboutSection = () => {
             purchase
           </p>
         </div>
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center  checks">
           {/* Icon */}
+          <div className="h-[100px] w-[150px] flex items-center flex-col justify-center   checksday">
+            {" "}
+            <img
+              width="50"
+              height="50"
+              src="https://img.icons8.com/pastel-glyph/128/box--v4.png"
+              alt="box--v4"
+            />
+            <div className="line"></div>
+          </div>
           {/* Icon */}
           <h3 className="font-bold text-xl py-5">24 hour Delivery</h3>
           <p className="text-center">
@@ -49,9 +68,18 @@ const AboutSection = () => {
             no time!
           </p>
         </div>
-        <div className="flex flex-col items-center">
-          {/* Icon */}
-          {/* Icon */}
+        <div className="flex flex-col items-center  checks">
+          <div className="h-[100px] w-[150px] flex items-center flex-col justify-center  checksday">
+            {/* Icon */}
+            <img
+              width="50"
+              height="50"
+              src="https://img.icons8.com/ios/50/receive-cash.png"
+              alt="receive-cash"
+            />
+            <div className="line"></div>
+            {/* Icon */}
+          </div>
           <h3 className="font-bold text-xl py-5">Easy Payment</h3>
           <p className="text-center">
             At Ntomawura, we believe that your fashion experience should be as
@@ -62,8 +90,8 @@ const AboutSection = () => {
       </div>
       {/* Checks Section */}
       {/* Section two */}
-      <section className="w-full h-screen bg-gray-400 px-[10vw] flex justify-start items-center">
-        <div className="bg-white w-[40%] h-[90%] relative  px-[3vw] py-[2vw]">
+      <section className="w-full lg:h-[110vh] min-h-fit bg-gray-400 px-[20vw] flex justify-start items-center about-section-one">
+        <div className="bg-white lg:w-[40%] md:w-[65%] w-full h-[70vh]  relative  px-[3vw] py-[2vw]">
           <h2 className="text-5xl font-bold pb-10">Our Styles</h2>
           <p className="text-light text-lg text-gray-900">
             &quot;Never find yourself at a loss for styling ideas again. Our

@@ -32,3 +32,26 @@ body {
 .fixed-background {
   background-attachment: fixed;
 }
+
+.checks > .checksday > .line {
+  width: 0; /* Start with width 0 */
+  height: 0; /* Start with height 0 */
+  opacity: 0; /* Start with opacity 0 (invisible) */
+  background: black;
+  transition: all 0.5s ease-in-out; /* Ensure transition includes width, height, and opacity */
+  margin-top: 20px;
+}
+
+.checks:hover > .checksday .line {
+  width: 100px; /* Expand width */
+  height: 2px; /* Expand height */
+  opacity: 1; /* Fade in (visible) */
+}
+
+.about-section-one {
+  background: url("https://images.pexels.com/photos/952670/pexels-photo-952670.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+    center no-repeat;
+  background-size: cover;
+
+  background-attachment: fixed;
+}

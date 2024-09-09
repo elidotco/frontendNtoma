@@ -2,10 +2,10 @@ import React from "react";
 
 const ProductCard = () => {
   return (
-    <div className="w-[22%] h-fit py-10 bg-transparent cursor-pointer  my-auto">
+    <div className="xl:w-[22%] w-full md:w-[40%] h-fit py-10 bg-transparent cursor-pointer  my-auto">
       {/* General width will have to be changed later */}
       {/* Product Image */}
-      <div className="w-full h-64 bg-green-300"></div>
+      <div className="w-full h-72 bg-green-300"></div>
 
       {/* Product Image */}
 

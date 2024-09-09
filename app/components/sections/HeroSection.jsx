@@ -20,7 +20,7 @@ const HeroSection = () => {
           disableOnInteraction: false,
         }}
         modules={[Autoplay]}
-        className="w-screen h-screen border"
+        className="w-screen h-screen"
       >
         <SwiperSlide className="bg-green-500">Slide 1</SwiperSlide>
         <SwiperSlide>Slide 2</SwiperSlide>
