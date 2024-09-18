@@ -108,7 +108,7 @@ const Nav = () => {
           </div>
           {/* items Sections */}
           {/* Checkout Sec */}
-          <div className="h-[27%] w-full mt-auto absolute px-4 bottom-0 bg-gray-100">
+          <div className="h-[27%] w-full mt-auto absolute px-4 top-0 bg-gray-100">
             <div className=" border-b border-gray-300 w-full py-5">
               <div className="flex w-full items-center justify-between">
                 <p>SubTotal</p>
