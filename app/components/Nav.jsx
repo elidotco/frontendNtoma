@@ -88,16 +88,21 @@ const Nav = () => {
         className={`w-screen h-screen fixed top-0 left-0 z-40 bg-gray-900 bg-opacity-50 ${
           isCartOpen ? "translate-y-0" : "translate-y-full"
         }`}
+        onClick={() => toggleCart()}
       >
         <div
-          className={`w-full md:w-[22%] absolute top-0 right-0 h-screen bg-white bg-opacity-100  ${
-            isCartOpen ? "translate-x-0" : "translate-x-full"
+          className={`w-full md:w-[22%] z-50 absolute top-0 right-0 h-screen bg-white bg-opacity-100 transition-transform duration-150 ${
+            isCartOpen ? "translate-x-0 " : "translate-x-full"
           } `}
+          onClick={(e) => e.stopPropagation()}
         >
           {/* header */}
           <div className="border-b  h-[10%] p-5 flex items-center">
             {/* Close Button */}
-            <div className=" w-8 h-8 cursor-pointer font-light text-2xl text-gray-400  hover:rotate-360 hover:text-black transition-transform duration-500">
+            <div
+              className=" w-8 h-8 cursor-pointer font-light text-2xl text-gray-400  hover:rotate-360 hover:text-black transition-transform duration-500"
+              onClick={() => toggleCart()}
+            >
               <XMarkIcon size={20} />
             </div>
             {/* Close Button */}
