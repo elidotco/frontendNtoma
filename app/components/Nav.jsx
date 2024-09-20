@@ -12,10 +12,11 @@ import { useState, useEffect } from "react";
 import ProCartCard from "./ProCartCard";
 
 const Nav = () => {
-  const [isCartOpen, setIsCartOpen] = useState(true);
+  const [isCartOpen, setIsCartOpen] = useState(false);
 
   const toggleCart = () => {
     setIsCartOpen(!isCartOpen);
+    console.log(isCartOpen);
   };
 
   useEffect(() => {
@@ -70,7 +71,7 @@ const Nav = () => {
             <MagnifyingGlassIcon size={24} color="" />
           </div>
           <div className=" cursor-pointer text-gray-600 hover:text-black transition-all duration-100 flex items-center ">
-            <div className="w-5 h-5 ">
+            <div className="w-5 h-5 " onClick={() => toggleCart()}>
               <ShoppingBagIcon size={24} color="" />
             </div>
             {/* Cart Items */}
@@ -83,8 +84,16 @@ const Nav = () => {
       {/* Menu items */}
 
       {/* Cart */}
-      <div className="w-screen h-screen fixed top-0 left-0 z-40 bg-gray-900 bg-opacity-50">
-        <div className="w-full md:w-[22%] absolute top-0 right-0 h-screen bg-white bg-opacity-100 translate-x-0 ">
+      <div
+        className={`w-screen h-screen fixed top-0 left-0 z-40 bg-gray-900 bg-opacity-50 ${
+          isCartOpen ? "translate-y-0" : "translate-y-full"
+        }`}
+      >
+        <div
+          className={`w-full md:w-[22%] absolute top-0 right-0 h-screen bg-white bg-opacity-100  ${
+            isCartOpen ? "translate-x-0" : "translate-x-full"
+          } `}
+        >
           {/* header */}
           <div className="border-b  h-[10%] p-5 flex items-center">
             {/* Close Button */}
@@ -102,13 +111,20 @@ const Nav = () => {
           </div>
           {/* header */}
           {/* items Sections */}
-          <div className="px-5 py-5">
+          <div className="px-5 py-5 h-screen overflow-auto">
+            <ProCartCard />
+            <ProCartCard />
+            <ProCartCard />
+            <ProCartCard />
+            <ProCartCard />
+            <ProCartCard />
+            <ProCartCard />
             <ProCartCard />
             <ProCartCard />
           </div>
           {/* items Sections */}
           {/* Checkout Sec */}
-          <div className="h-[27%] w-full mt-auto absolute px-4 top-0 bg-gray-100">
+          <div className="h-[27%] w-full mt-auto absolute px-4 bottom-0 bg-gray-100">
             <div className=" border-b border-gray-300 w-full py-5">
               <div className="flex w-full items-center justify-between">
                 <p>SubTotal</p>
