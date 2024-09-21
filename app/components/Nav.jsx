@@ -2,6 +2,7 @@
 
 import React from "react";
 import {
+  Bars3BottomRightIcon,
   MagnifyingGlassIcon,
   ShoppingBagIcon,
   XMarkIcon,
@@ -37,7 +38,7 @@ const Nav = () => {
     <header className="w-full h-fit">
       <div className=" w-full mt-20"></div>
       {/* Menu items */}
-      <nav className="w-screen overflow-hidden flex items-center justify-between px-[20vw] bg-[#fff] h-20 shadow-gray-200 z-10 shadow top-0 left-0 bg-opacity-95 fixed">
+      <nav className="w-screen overflow-hidden flex items-center justify-between px-10 xl:px-[20vw] bg-[#fff] h-20 shadow-gray-200 z-10 shadow top-0 left-0 bg-opacity-95 fixed">
         {/* Logo */}
         <div className=" italic font-semibold text-2xl w-16 h-16">
           <Image src={logo} alt="logo" className="w-full h-full" />
@@ -45,28 +46,44 @@ const Nav = () => {
         {/* Logo */}
 
         {/* Menu List */}
-        <ul className="flex items-center">
-          <li className="relative list h-20 px-5 flex items-center justify-center">
-            <a href="">Home</a>
-            <div className="line w-full absolute bottom-0 bg-black h-1"></div>
-          </li>
-          <li className="relative list h-20 px-5 flex items-center justify-center">
-            <a href="">Shop</a>
-            <div className="line w-full absolute bottom-0 bg-black h-1"></div>
-          </li>
-          <li className="relative list h-20 px-5 flex items-center justify-center">
-            <a href="">About</a>
-            <div className="line w-full absolute bottom-0 bg-black h-1"></div>
-          </li>
-          <li className="relative list h-20 px-5 flex items-center justify-center">
-            <a href="">Contact</a>
-            <div className="line w-full absolute bottom-0 bg-black h-1"></div>
-          </li>
-        </ul>
+        <div className="fixed top-0 left-0 bottom-0  z-50 w-full mt- h-screen bg-slate-300 bg-opacity-25">
+          <ul className="flex-col absolute right-0 bg-[#191919] text-white w-3/5 h-screen md:flex md:items-center">
+            <div className="flex gap-6 ml-auto sm:ml-0  sm:px-0 px-9 items-center text-white">
+              <div className="w-5 h-5 cursor-pointer text-gray-600 hover:text-black transition-all duration-100">
+                <MagnifyingGlassIcon size={24} color="" />
+              </div>
+              <div className=" cursor-pointer text-gray-600 hover:text-black transition-all duration-100 flex items-center ">
+                <div className="w-5 h-5 " onClick={() => toggleCart()}>
+                  <ShoppingBagIcon size={24} color="" />
+                </div>
+                {/* Cart Items */}
+                <div className="pl-1 text-lg font-medium text-black">0</div>
+                {/* Cart Items */}
+              </div>
+            </div>
+
+            <li className="relative list md:h-20 text-left py-2 border-t  px-5 flex md:items-center md:justify-center">
+              <a href="">Home</a>
+              <div className="line w-full absolute bottom-0 bg-black h-1"></div>
+            </li>
+            <li className="relative list md:h-20 text-left py-2 border-t  px-5 flex md:items-center md:justify-center">
+              <a href="">Shop</a>
+              <div className="line w-full absolute bottom-0 bg-black h-1"></div>
+            </li>
+            <li className="relative list md:h-20 text-left py-2 border-t  px-5 flex md:items-center md:justify-center">
+              <a href="">About</a>
+              <div className="line w-full absolute bottom-0 bg-black h-1"></div>
+            </li>
+            <li className="relative list md:h-20 text-left py-2 border-t  px-5 flex md:items-center md:justify-center">
+              <a href="">Contact</a>
+              <div className="line w-full absolute bottom-0 bg-black h-1"></div>
+            </li>
+          </ul>
+        </div>
         {/* Menu List */}
 
         {/* Extras */}
-        <div className="flex gap-6 items-center text-white">
+        <div className="flex gap-6 ml-auto sm:ml-0  sm:px-0 px-9 items-center text-white">
           <div className="w-5 h-5 cursor-pointer text-gray-600 hover:text-black transition-all duration-100">
             <MagnifyingGlassIcon size={24} color="" />
           </div>
@@ -80,6 +97,9 @@ const Nav = () => {
           </div>
         </div>
         {/* Extras */}
+        <div className="w-5 h-5">
+          <Bars3BottomRightIcon />
+        </div>
       </nav>
       {/* Menu items */}
 
