@@ -14,9 +14,14 @@ import ProCartCard from "./ProCartCard";
 
 const Nav = () => {
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const [menu, setMenu] = useState(false);
 
   const toggleCart = () => {
     setIsCartOpen(!isCartOpen);
+    console.log(isCartOpen);
+  };
+  const toggleMenu = () => {
+    setMenu(!menu);
     console.log(isCartOpen);
   };
 
@@ -46,35 +51,58 @@ const Nav = () => {
         {/* Logo */}
 
         {/* Menu List */}
-        <div className="fixed top-0 left-0 bottom-0  z-50 w-full mt- h-screen bg-slate-300 bg-opacity-25">
-          <ul className="flex-col absolute right-0 bg-[#191919] text-white w-3/5 h-screen md:flex md:items-center">
-            <div className="flex gap-6 ml-auto sm:ml-0  sm:px-0 px-9 items-center text-white">
-              <div className="w-5 h-5 cursor-pointer text-gray-600 hover:text-black transition-all duration-100">
+        <div
+          className={`${
+            menu
+              ? "fixed flex md:static top-0 left-0 bottom-0  z-50 w-full mt- h-screen md:h-20 bg-black md:bg-transparent bg-opacity-50 md:bg-opacity-100"
+              : ""
+          }`}
+        >
+          <ul
+            className={`md:flex md:items-center  transition-transform duration-150 ${
+              menu
+                ? "flex-col md:flex-row md:static absolute right-0 md:bg-transparent translate-x-0 bg-[#191919] text-white  md:text-black w-[65%] h-screen"
+                : "flex-col md:flex-row md:static absolute right-0 md:bg-transparent  bg-[#191919] text-white md:text-black w-[70%] h-screen translate-x-full md:translate-x-0"
+            }`}
+          >
+            {/* Close Button */}
+            <div
+              className=" w-8 h-8 cursor-pointer absolute top-3 right-3 font-light text-2xl md:hidden text-gray-400  hover:rotate-360 hover:text-black transition-transform duration-500"
+              onClick={() => toggleMenu()}
+            >
+              <XMarkIcon size={20} />
+            </div>
+            {/* Close Button */}
+            <div className="md:hidden  w-full   justify-center flex pt-20 pb-5 gap-5 ml-auto sm:ml-0  sm:px-0 px-9 items-center text-white">
+              <div className="w-6 h-6 cursor-pointer text-[#A6A6A6] transition-all duration-100">
                 <MagnifyingGlassIcon size={24} color="" />
               </div>
               <div className=" cursor-pointer text-gray-600 hover:text-black transition-all duration-100 flex items-center ">
-                <div className="w-5 h-5 " onClick={() => toggleCart()}>
+                <div
+                  className="w-6 h-6 cursor-pointer text-[#A6A6A6] transition-all duration-100 "
+                  onClick={() => toggleCart()}
+                >
                   <ShoppingBagIcon size={24} color="" />
                 </div>
                 {/* Cart Items */}
-                <div className="pl-1 text-lg font-medium text-black">0</div>
+
                 {/* Cart Items */}
               </div>
             </div>
 
-            <li className="relative list md:h-20 text-left py-2 border-t  px-5 flex md:items-center md:justify-center">
+            <li className="relative list md:h-20 text-left md:text md:py-0 py-3 border-t-[0.4px] border-gray-200 md:border-none  px-5 flex md:items-center md:justify-center">
               <a href="">Home</a>
               <div className="line w-full absolute bottom-0 bg-black h-1"></div>
             </li>
-            <li className="relative list md:h-20 text-left py-2 border-t  px-5 flex md:items-center md:justify-center">
+            <li className="relative list md:h-20 text-left py-3 border-t-[0.4px] border-gray-200  px-5 flex md:items-center md:justify-center">
               <a href="">Shop</a>
               <div className="line w-full absolute bottom-0 bg-black h-1"></div>
             </li>
-            <li className="relative list md:h-20 text-left py-2 border-t  px-5 flex md:items-center md:justify-center">
+            <li className="relative list md:h-20 text-left py-3 border-t-[0.4px] border-gray-200  px-5 flex md:items-center md:justify-center">
               <a href="">About</a>
               <div className="line w-full absolute bottom-0 bg-black h-1"></div>
             </li>
-            <li className="relative list md:h-20 text-left py-2 border-t  px-5 flex md:items-center md:justify-center">
+            <li className="relative list md:h-20 text-left py-3 border-t-[0.4px] border-gray-200  px-5 flex md:items-center md:justify-center">
               <a href="">Contact</a>
               <div className="line w-full absolute bottom-0 bg-black h-1"></div>
             </li>
@@ -97,7 +125,7 @@ const Nav = () => {
           </div>
         </div>
         {/* Extras */}
-        <div className="w-5 h-5">
+        <div className="md:hidden w-5 h-5" onClick={() => toggleMenu()}>
           <Bars3BottomRightIcon />
         </div>
       </nav>
