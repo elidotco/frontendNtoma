@@ -7,7 +7,7 @@ import "swiper/css/navigation";
 
 const HeroSection = () => {
   return (
-    <div className="w-full min-h-screen   flex justify-start  herosection">
+    <div className="w-full   flex justify-start  herosection">
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
@@ -20,7 +20,7 @@ const HeroSection = () => {
           disableOnInteraction: false,
         }}
         modules={[Autoplay]}
-        className="w-screen h-screen"
+        className="w-screen lg:h-screen h-[100vw] border"
       >
         <SwiperSlide className="bg-green-500">Slide 1</SwiperSlide>
         <SwiperSlide>Slide 2</SwiperSlide>

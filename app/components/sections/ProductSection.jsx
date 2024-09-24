@@ -3,7 +3,7 @@ import ProductCard from "../ProductCard";
 
 const ProductSection = () => {
   return (
-    <div className="flex px-[10vw] justify-between items-center gap-10 flex-wrap overflow-hidden">
+    <div className="flex w-full md:px-[10vw] px-6 justify-between items-center  flex-wrap overflow-hidden">
       <ProductCard />
       <ProductCard />
       <ProductCard />

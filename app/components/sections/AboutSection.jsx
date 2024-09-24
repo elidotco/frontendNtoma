@@ -5,15 +5,21 @@ const AboutSection = () => {
   return (
     <section className="w-full">
       {/* Section One */}
-      <section className="w-full   lg:h-[110vh] min-h-fit bg-black px-[20vw] flex justify-start items-center about-section-one">
-        <div className="bg-white  h-[70vh] relative lg:w-[40%] md:w-[65%] w-full   px-[3vw] py-[2vw]">
-          <h2 className="text-5xl font-bold pb-10">Shop Now and Enjoy</h2>
-          <p className="text-light text-lg text-gray-900">
+      <section className="w-full h-[110vh]   bg-gray-400 px-[10vw] md:px-[20vw] flex justify-start items-center about-section-one">
+        <div className="bg-white lg:w-[40%] md:w-[65%] w-full h-[60vh] sm:h-[70vh]  relative  px-[3vw] py-[5vw] flex items-center md:items-start md:justify-start  flex-col ">
+          <h2 className="lg:text-3xl text-center  sm:text-left text-[8vw] font-bold pb-5 md:pb-10">
+            Shop Now and Enjoy
+          </h2>
+          <p className="text-light text-sm text-center md:text-left lg:text-lg text-gray-900">
             Elevate your style with Ntomawura&apos;s hottest sale of the season!
             🌟 Dive into a world of exquisite fabrics, unrivaled quality, and
             unbeatable prices. Don&apos;t miss out on the chance to upgrade your
             wardrobe with timeless pieces that redefine elegance.
           </p>
+
+          <h3 className="md:text-2xl font-bold py-5">
+            Be royal in your own fashion
+          </h3>
           <a href="#">
             <div className="w-12 h-12 mt-auto absolute bottom-6 rounded-full flex items-center justify-center border-2 border-black">
               <div className="w-5 h-5 ">
@@ -26,7 +32,7 @@ const AboutSection = () => {
       {/* Section One */}
 
       {/* Checks Section */}
-      <div className="flex items-center flex-col md:flex-row justify-between gap-16 py-20 px-[10vw]">
+      <div className="flex items-center gap-3 flex-col md:flex-row justify-between lg:gap-16 py-20 px-[10vw]">
         <div className="flex flex-col items-center checks">
           <div className="h-[100px] w-[150px] flex items-center flex-col justify-center  checksday">
             {/* Icon */}
@@ -90,10 +96,12 @@ const AboutSection = () => {
       </div>
       {/* Checks Section */}
       {/* Section two */}
-      <section className="w-full lg:h-[110vh] min-h-fit bg-gray-400 px-[20vw] flex justify-start items-center about-section-one">
-        <div className="bg-white lg:w-[40%] md:w-[65%] w-full h-[70vh]  relative  px-[3vw] py-[2vw]">
-          <h2 className="text-5xl font-bold pb-10">Our Styles</h2>
-          <p className="text-light text-lg text-gray-900">
+      <section className="w-full h-[110vh]   bg-gray-400 px-[10vw] md:px-[20vw] flex justify-start items-center about-section-one">
+        <div className="bg-white lg:w-[40%] md:w-[65%] w-full h-[60vh] sm:h-[70vh]  relative  px-[3vw] py-[2vw] flex items-center md:items-start md:justify-start justify-center flex-col ">
+          <h2 className="lg:text-3xl text-[8vw] font-bold pb-5 md:pb-10">
+            Our Styles
+          </h2>
+          <p className="text-light text-sm text-center md:text-left lg:text-lg text-gray-900">
             &quot;Never find yourself at a loss for styling ideas again. Our
             dedication lies in offering you a collection of elegant and
             contemporary designs that will not only meet your fashion needs but
@@ -102,7 +110,7 @@ const AboutSection = () => {
             Let your wardrobe choices reflect your style effortlessly.&quot;
           </p>
 
-          <h3 className="text-2xl font-bold py-5">
+          <h3 className="md:text-2xl font-bold py-5">
             Be royal in your own fashion
           </h3>
           <a href="#">
@@ -120,3 +128,5 @@ const AboutSection = () => {
 };
 
 export default AboutSection;
+
+//

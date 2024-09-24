@@ -140,7 +140,9 @@ const Nav = () => {
       >
         <div
           className={`w-full md:w-[22%] z-50 absolute top-0 right-0 h-screen bg-white bg-opacity-100 transition-transform duration-150 ${
-            isCartOpen ? "translate-x-0 " : "translate-x-full"
+            isCartOpen
+              ? "translate-x-0 transition-transform duration-150"
+              : "translate-x-full transition-transform duration-150"
           } `}
           onClick={(e) => e.stopPropagation()}
         >
@@ -164,7 +166,7 @@ const Nav = () => {
           </div>
           {/* header */}
           {/* items Sections */}
-          <div className="px-5 py-5 h-screen overflow-auto">
+          <div className="px-5 py-5 pb-32 h-screen overflow-auto">
             <ProCartCard />
             <ProCartCard />
             <ProCartCard />
