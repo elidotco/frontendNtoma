@@ -43,7 +43,7 @@ const Nav = () => {
     <header className="w-full h-fit">
       <div className=" w-full mt-20"></div>
       {/* Menu items */}
-      <nav className="w-screen overflow-hidden flex items-center justify-between px-10 xl:px-[20vw] bg-[#fff] h-20 shadow-gray-200 z-10 shadow top-0 left-0 bg-opacity-95 fixed">
+      <nav className="w-screen overflow-hidden flex items-center justify-between px-10 xl:px-[20vw] bg-[#fff] h-20  z-10  top-0 left-0 bg-opacity-95 fixed">
         {/* Logo */}
         <div className=" italic font-semibold text-2xl w-16 h-16">
           <Image src={logo} alt="logo" className="w-full h-full" />

@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
     case "/services":
       data = "Ntomawura || Weaving Dreams with fabrics";
       break;
-    case "/portfolio":
+    case "/product":
       data = "Ntomawura || Weaving Dreams with fabrics";
       break;
     case "/contact":
