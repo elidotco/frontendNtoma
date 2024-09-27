@@ -20,7 +20,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center pt-0">
       <Nav />
       <BreadCrumb />
-      <div className="flex items-start w-full px-10 md:px-[20vw] py-10 flex-col md:flex-row">
+      <div className="flex items-start w-full px-10 md: 2xl:px-[20vw] py-10 flex-col md:flex-row">
         <div className="w-full md:w-[60%] h-[40vh] md:h-[60vh] bg-green-300"></div>
         <div className="w-full md:w-[40%] h-[60vh] py-10 md:py-10 md:pl-10  ">
           <div className="flex w-full py-5 items-center flex-col justify-between">
@@ -53,7 +53,7 @@ export default function Home() {
         </div>
       </div>
       {/* Related Products */}
-      <section className="md:px-[20vw] px-10 w-full">
+      <section className="2xl:px-[20vw] lg:px-[10vw] px-10 w-full">
         {" "}
         <RelatedProducts />
       </section>
